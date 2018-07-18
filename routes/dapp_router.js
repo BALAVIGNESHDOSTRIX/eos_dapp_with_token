@@ -12,10 +12,8 @@ app.use(express.urlencoded({ extended: true }));
 initaPrivate = '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'
 initaPublic = 'EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV'
 keyProvider = initaPrivate
+app.disable('etag');
 
-
-config = {
-  chainId: 'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7
 
 config = {
     chainId: '038f4b0fc8ff18a4f0842a8f0564611f6e96e8535901dd45e43ac8691a1c4dca', // Jungle Testnet  http://dev.cryptolions.io:38888/v1/chain/get_info
@@ -34,6 +32,7 @@ pubkey = 'EOS6AfWxPVh3L2gTy4Y9i7eQyaZsGCeWpZTtuZtNymB1HL5PtDQn3'
 
 config.binaryen = require("binaryen")
 eos = Eos.Testnet(config)
+
 
 token_router.post('/acc_create',(req,res,next) =>{
 eos.transaction(tr => {
@@ -189,5 +188,4 @@ else{
 
 })
 module.exports = token_router;
-
 
