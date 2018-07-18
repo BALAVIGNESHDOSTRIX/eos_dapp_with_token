@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TokenDapp</title>
+</head>
+<body>
+	<center>
+		<div>
+			<form method="post" action="/token/acc_create">
+				<h1>CREATE A ACCOUNT FOR DEPLOYEMENT</h1>
+				<table>
+					<tr><td>ENTER THE ACCOUNT NAME:</td><td><input type="text" name="acc_name"></td></tr>
+					<tr><td>CLICK TO CREATE:</td><td><input type="submit" value="Create"></td></tr>
+				</table>
+			</form>
+		</div>
+		<form method="post">
+				<h1>CONTRACT DEPLOYEMENT</h1>
+				<table>
+					<tr><td>ENTER THE DEPLOY ACCOUNT :</td><td><input type="text" name="doply_acc"></td></tr>
+					<tr><td><input type="submit" value="SetWasm" formaction="/token/setwasm"></td><td><input type="submit" value="SetAbi" formaction="/token/setabi"></td></tr>
+				</table>
+			</form>
+		</div>
+
+		<div>
+			<form method="post" action="/token/tok_create">
+				<h1>CREATE THE TOKEN</h1>
+				<table>
+				<tr><td>ENTER THE ACCOUNT NAME FOR CREATION:</td><td><input type="text" name="ac_name"></td></tr>
+				<tr><td>ENTER THE TOTALSUPPLY:</td><td><input type="text" name="total_sup"></td></tr>
+				<tr><td>ENETR THE SYMBOL:</td><td><input type="text" name="sym"></td></tr>
+				<tr><td>CLICK TO CREATE TOKEN:</td><td><input type="submit" value="TokenCreate"></td></tr>
+				</table>
+			</form>
+		</div>
+
+		
+
+		<div>
+			<form method="POST" action="/token/transer">
+				<h1>TRANSFER THE TOKEN</h1>
+				<table>
+					 <tr><td>ENTER THE CONTRACT ACCOUNT:</td><td><input type="text" name="contract_acc"></td></tr>
+						<tr><td>ENTER THE FROM ACCOUNT:</td><td><input type="text" name="trans_from"></td></tr>
+						<tr><td>ENTER THE TO ACCOUNT:</td><td><input type="text" name="trans_to"></td></tr>
+						<tr><td>ENTER THE TOKEN SYMBOL:</td><td><input type="text" name="send_smb"></td></tr>
+						<tr><td>ENTER THE AMOUNT TOKEN:</td><td><input type="text" name="trans_amo"></td></tr>
+						<tr><td>CLICK TO TRANSFER TOKEN:</td><td><input type="submit" value="Transfer"></td></tr>
+				</table>
+			</form>	
+		</div>
+
+		<div>
+			<form method="post" action="/token/getbal">
+				<h1>GET BALANCE</h1>
+				<table>
+					<tr><td>ENTER THE CONTRACT NAME:</td><td><input type="text" name="con_namet"></td></tr>
+					<tr><td>ENTER THE ACCOUNT NAME:</td><td><input type="text" name="acc_nio"></td></tr>
+					<tr><td>ENTER THE TOKEN SYMBOL:</td><td><input type="text" name="smbc"></td></tr>
+					<tr><td>CLICK TO GET TOKEN BALANCE:</td><td><input type="submit" value="GetBalance"></td><tr>
+				</table> 
+			</form>
+		</div>
+	</center>
+
+</body>
+</html>

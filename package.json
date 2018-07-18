@@ -1,0 +1,22 @@
+{
+  "name": "tokenapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BALAVIGNESH M",
+  "license": "MIT",
+  "dependencies": {
+    "binaryen": "^48.0.0",
+    "body-parser": "^1.18.3",
+    "eosjs": "^15.0.3",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.2.1",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.5"
+  }
+}
